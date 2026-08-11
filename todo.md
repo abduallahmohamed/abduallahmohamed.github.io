@@ -1,0 +1,21 @@
+
+## Accessibility (WCAG 2.1 AA — Blind/Screen Reader)
+- [x] Add skip-to-main-content link at top of page
+- [x] Add aria-label to all icon-only links (GitHub, LinkedIn, Scholar, Mail, Phone)
+- [x] Add aria-label to all nav buttons (section scroll buttons)
+- [x] Add aria-current="page" / aria-pressed to active nav items
+- [x] Add role="main" and id="main-content" to main content wrapper
+- [x] Add aria-label to nav landmarks (desktop sidebar, mobile nav)
+- [x] Add aria-hidden="true" to decorative canvas (particle animation)
+- [x] Add aria-hidden="true" to all decorative icons inside text links
+- [x] Add aria-label to all external links indicating they open in new tab
+- [x] Add alt text to profile image (already has alt, verify it's descriptive)
+- [x] Add aria-label to mobile menu buttons
+- [x] Add role="list" / role="listitem" where ul/li semantics are missing
+- [x] Add aria-label to publication links (paper title + venue)
+- [x] Add focus-visible styles to all interactive elements
+- [x] Add aria-label to contact links (email, phone)
+- [x] Add lang="en" to html (already present — verify)
+- [x] Add <title> to all pages (already present — verify)
+- [x] Ensure color contrast meets WCAG AA (4.5:1 for normal text)
+- [x] Add aria-live region for dynamic content (publications loading)
