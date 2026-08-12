@@ -12,17 +12,8 @@ import {
   ExternalLink, ChevronRight, Award, Cpu, Brain,
   Layers, Radio, MapPin, ArrowRight, Users
 } from "lucide-react";
-
-// ─── Publication type ───────────────────────────────────────────────────────
-interface Publication {
-  title: string;
-  venue: string;
-  year: string;
-  citations: number | null;
-  link: string;
-  github: string | null;
-  demo: boolean;
-}
+// Publication data (auto-refreshed monthly by scripts/update-scholar.mjs)
+import { staticPublications, staticTotalCitations, type Publication } from "@/data/publications";
 
 // ─── Animated particle canvas ───────────────────────────────────────────────
 function ParticleCanvas() {
@@ -232,26 +223,6 @@ function Nav() {
   );
 }
 
-// ─── Static fallback publications data ───────────────────────────────────────
-const staticPublications = [
-  { year: "2026", title: "EgoInertia-MI: A Multimodal Egocentric Vision and IMU Benchmark for Motor Impairment Assessment", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2607.03934", demo: false, github: null },
-  { year: "2026", title: "PAVE: A Cognitive Architecture for Legitimate Violation in Generative Agent Societies", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2605.19351", demo: false, github: null },
-  { year: "2026", title: "EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2605.19004", demo: false, github: null },
-  { year: "2026", title: "iMotion-LLM: Instruction-Conditioned Trajectory Generation", venue: "WACV", citations: 5, link: "https://arxiv.org/abs/2403.04928", demo: false, github: null },
-  { year: "2024", title: "A Review of Deep Learning for Video Captioning", venue: "IEEE TPAMI", citations: 76, link: "https://scholar.google.com/citations?user=FAOtbV4AAAAJ", demo: false, github: null },
-  { year: "2023", title: "FollowMe: Vehicle Behaviour Prediction in Autonomous Vehicle Settings", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2304.06121", demo: false, github: null },
-  { year: "2022", title: "Social-Implicit: Rethinking Trajectory Prediction Evaluation and The Effectiveness of Implicit MLE", venue: "ECCV", citations: 163, link: "https://arxiv.org/abs/2203.03057", demo: false, github: "https://github.com/abduallahmohamed/Social-Implicit" },
-  { year: "2022", title: "HAR-GCNN: Deep Graph CNNs for Human Activity Recognition From Highly Unlabeled Mobile Sensor Data", venue: "IEEE PerCom", citations: 45, link: "https://arxiv.org/abs/2011.01902", demo: false, github: null },
-  { year: "2022", title: "On the Motion and Action Prediction Using Deep Graph Models (PhD Thesis)", venue: "UT Austin", citations: null, link: "https://repositories.lib.utexas.edu/handle/2152/115782", demo: false, github: null },
-  { year: "2021", title: "Skeleton-Graph: Long-Term 3D Motion Prediction From 2D Observations Using Deep Spatio-Temporal Graph CNNs", venue: "ICCV Workshop", citations: 14, link: "https://arxiv.org/abs/2109.10257", demo: false, github: null },
-  { year: "2021", title: "Putting SOTIF into Practice: Safety Critical Event Detection Using Predictive Models", venue: "SAE Technical Paper", citations: 13, link: "https://www.sae.org/publications/technical-papers/content/2021-01-0089/", demo: false, github: null },
-  { year: "2020", title: "SocialSTGCNN: A Social Spatio-Temporal Graph Convolutional Neural Network for Human Trajectory Prediction", venue: "CVPR", citations: 1467, link: "https://arxiv.org/abs/2002.11927", demo: true, github: "https://github.com/abduallahmohamed/Social-STGCNN" },
-  { year: "2020", title: "Inner Ensemble Networks: Average Ensemble as an Effective Regularizer", venue: "arXiv", citations: 1, link: "https://arxiv.org/abs/2006.08305", demo: false, github: "https://github.com/abduallahmohamed/inner_ensemble_nets" },
-  { year: "2019", title: "Physics Informed Data Driven Model for Flood Prediction: Application of Deep Learning in Prediction of Urban Flood Development", venue: "arXiv", citations: 49, link: "https://arxiv.org/abs/1908.10312", demo: false, github: null },
-  { year: "2018", title: "An IMU-based Traffic and Road Condition Monitoring System", venue: "HardwareX", citations: 40, link: "https://www.sciencedirect.com/science/article/pii/S2468067218300543", demo: false, github: null },
-  { year: "2018", title: "MCRM: Mother Compact Recurrent Memory", venue: "arXiv", citations: 1, link: "https://arxiv.org/abs/1808.02016", demo: false, github: null },
-  { year: "2018", title: "Locating an Object in the Environment of a Motor Vehicle by an Ultrasonic Sensor System", venue: "DE Patent DE102017101476B3", citations: null, link: "https://patents.google.com/patent/DE102017101476B3", demo: false, github: null },
-];
 
 const experience = [
   {
@@ -526,7 +497,7 @@ export default function Home() {
   });
 
   const publications: Publication[] = (scholarData?.publications as Publication[] | undefined) ?? staticPublications;
-  const totalCitations = scholarData?.totalCitations ?? 1877;
+  const totalCitations = scholarData?.totalCitations ?? staticTotalCitations;
   const isLoadingPublications = scholarLoading;
 
   const stats = [

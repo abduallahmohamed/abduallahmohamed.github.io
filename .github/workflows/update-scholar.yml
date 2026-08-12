@@ -1,0 +1,47 @@
+name: Update Scholar Data
+
+on:
+  schedule:
+    - cron: "0 6 1 * *" # 06:00 UTC on the 1st of each month
+  workflow_dispatch: # allow manual runs from the Actions tab
+
+permissions:
+  contents: write
+  actions: write # to trigger the deploy workflow when data changes
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Scrape Google Scholar → regenerate publications.ts
+        # Exits 0 and writes nothing if Scholar blocks the request, so a failed
+        # scrape simply produces no diff (last-good data is preserved).
+        run: node scripts/update-scholar.mjs
+
+      - name: Commit & deploy if data changed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet -- client/src/data/publications.ts; then
+            echo "No change in Scholar data — nothing to deploy."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add client/src/data/publications.ts
+          git commit -m "chore: monthly Scholar data refresh"
+          git push
+          # Pushes made with GITHUB_TOKEN don't auto-trigger other workflows,
+          # so kick the deploy explicitly.
+          gh workflow run deploy.yml
