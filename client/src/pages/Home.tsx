@@ -188,7 +188,7 @@ function Nav() {
           <a href="https://github.com/abduallahmohamed" target="_blank" rel="noreferrer" aria-label="GitHub profile (opens in new tab)" className="text-muted-foreground hover:text-primary transition-colors">
             <Github size={16} aria-hidden="true" />
           </a>
-          <a href="https://www.linkedin.com/in/abduallah-mohamed/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile (opens in new tab)" className="text-muted-foreground hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/abduallah/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile (opens in new tab)" className="text-muted-foreground hover:text-primary transition-colors">
             <Linkedin size={16} aria-hidden="true" />
           </a>
           <a href="https://scholar.google.com/citations?hl=en&user=FAOtbV4AAAAJ" target="_blank" rel="noreferrer" aria-label="Google Scholar profile (opens in new tab)" className="text-muted-foreground hover:text-primary transition-colors">
@@ -231,8 +231,8 @@ const experience = [
     period: "Jun 2026 – Present",
     startYear: "2026",
     location: "Redmond, WA",
-    desc: "Building the AI platform that chip design teams actually run on. AIDAChip is the alignment layer for silicon engineering, automating semiconductor IP development and cutting design cycle time by up to 40%. Leading the agent architecture, model selection, and verification systems that hold shared context across analog, digital, and verification teams — so intent carries cleanly through every handoff.",
-    tags: ["Agentic AI", "LLM Agents", "Chip Design Automation", "Semiconductor IP", "AI Platform"],
+    desc: "Own AI/ML strategy and roadmap for AIDAChip's AI-native chip-design platform, reporting to the CEO and leading a senior org of Principal and Senior Principal engineers and scientists. Designed the multi-agent architecture — specialist agents for spec, RTL, verification and layout sharing context across analog, digital and verification teams — cutting design cycle time by 40% and scaling to 100+ active chip designers, including on-prem air-gapped deployments. Also designed the organizational memory system (SOTA on LoCoMo, joint research with tier-1 universities), a knowledge-graph-grounded knowledge base, and the evaluation framework behind every model and agent release.",
+    tags: ["Agentic AI", "Multi-Agent Systems", "AI Memory", "Knowledge Graphs", "LLM Evaluation", "Chip Design Automation"],
     img: null,
     link: "https://www.aidachip.com/",
     note: null,
@@ -244,8 +244,8 @@ const experience = [
     period: "2022 – 2026",
     startYear: "2022",
     location: "Redmond, WA",
-    desc: "Technical lead across 4+ product groups and 6+ teams. Research in outdoor/indoor motion tracking, fitness AI, SLAM pipelines, and non-visual localization for Smart Glasses and AR/VR devices. Architected LLM-based swarm intelligence frameworks for product development.",
-    tags: ["SLAM", "Sensor Fusion", "Edge AI", "LLM Agents", "AR/VR"],
+    desc: "Technical lead across 4+ product groups and 6+ teams. Research in outdoor/indoor motion tracking, fitness AI, SLAM pipelines, and non-visual localization for Smart Glasses and AR/VR devices. Launched VLMs for real-time contextual AI answering \"where are you\" and \"what are you looking at\" from egocentric sensor streams. Built an org-level self-improving agentic system that auto-resolves engineering issues, cutting days of work to hours, and architected multi-agent swarm models for motion tracking.",
+    tags: ["SLAM", "Sensor Fusion", "Edge AI", "LLM Agents", "VLMs", "AR/VR"],
     img: "https://d2xsxph8kpxj0f.cloudfront.net/310519663382653785/gKvNkkVqVoDXab76WfQ77g/meta-rl-work-2DBkzAbFzJEgSSj9BUK2sE.webp",
     note: null,
     simple: false,
@@ -316,8 +316,8 @@ const expertise = [
   {
     icon: Cpu,
     label: "Agentic Systems",
-    desc: "LLM-driven swarm intelligence frameworks, automated hardware debugging pipelines, and autonomous engineer persona agents for complex multi-team environments.",
-    tags: ["LLM Agents", "Swarm AI", "Auto-debugging", "Pipelines"],
+    desc: "Multi-agent architectures, organizational memory and knowledge-base systems, and evaluation frameworks for LLM agents — plus automated hardware debugging pipelines and autonomous engineer persona agents for complex multi-team environments.",
+    tags: ["LLM Agents", "AI Memory", "Knowledge Bases", "Agent Evaluation", "Auto-debugging"],
   },
   {
     icon: Brain,
@@ -502,7 +502,7 @@ export default function Home() {
 
   const stats = [
     { value: `${totalCitations.toLocaleString()}+`, label: "Citations", href: "https://scholar.google.com/citations?hl=en&user=FAOtbV4AAAAJ" },
-    { value: "10+", label: "Publications", href: "#publications" },
+    { value: "15+", label: "Publications", href: "#publications" },
     { value: "5+", label: "Research Domains", href: null },
     { value: "1", label: "Patent", href: "https://patents.google.com/patent/DE102017101476B3" },
     { value: "200+", label: "GitHub Stars", href: "https://github.com/abduallahmohamed" },
@@ -569,7 +569,7 @@ export default function Home() {
               </h1>
               <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
                 VP of AI/ML at <span className="text-foreground font-medium">AIDAChip Inc</span>, building the AI platform for semiconductor IP development. Former Principal Research Scientist at <span className="text-foreground font-medium">Meta Reality Labs</span>.
-                Core expertise spans <span className="text-foreground/80">agentic AI &amp; LLM frameworks</span>, <span className="text-foreground/80">IMU &amp; multi-modal sensor fusion</span>, <span className="text-foreground/80">indoor/outdoor motion tracking</span>, <span className="text-foreground/80">SLAM &amp; non-visual localization</span>, and <span className="text-foreground/80">multi-agent trajectory prediction</span>.
+                Core expertise spans <span className="text-foreground/80">agentic AI &amp; LLM frameworks</span>, <span className="text-foreground/80">AI memory &amp; knowledge systems</span>,<span className="text-foreground/80">IMU &amp; multi-modal sensor fusion</span>, <span className="text-foreground/80">indoor/outdoor motion tracking</span>, <span className="text-foreground/80">SLAM &amp; non-visual localization</span>, and <span className="text-foreground/80">multi-agent trajectory prediction</span>.
                 PhD, Electrical &amp; Computer Engineering — UT Austin.
               </p>
 
@@ -578,7 +578,7 @@ export default function Home() {
                 <span className="mt-0.5 shrink-0 w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse" />
                 <p className="text-xs leading-relaxed" style={{ color: "oklch(0.72 0.19 15)" }}>
                   <span className="font-semibold" style={{ color: "oklch(0.78 0.2 15)" }}>Open to collaboration —</span>{" "}
-                  I'm currently co-supervising and collaborating with PhD students and researchers working on motion &amp; agentic AI problems. Please reach out if you seek collaboration.
+                  I'm currently co-supervising and collaborating with PhD students and researchers working on motion prediction, agentic AI &amp; memory systems. Please reach out if you seek collaboration.
                 </p>
               </div>
 
@@ -609,7 +609,7 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="mailto:abduallah.adel.omar@gmail.com"
+                  href="mailto:abduallahaom@gmail.com"
                   aria-label="Send email to Abduallah Mohamed"
                   className="flex items-center gap-2 border border-border text-muted-foreground px-5 py-2.5 rounded text-sm font-semibold hover:text-foreground hover:border-foreground/30 transition-colors"
                 >
@@ -819,11 +819,11 @@ export default function Home() {
                     Open to research collaborations, speaking engagements, and advisory opportunities in applied AI, sensor systems, and autonomous systems.
                   </p>
                   <div className="flex flex-col gap-4">
-                    <a href="mailto:abduallah.adel.omar@gmail.com" aria-label="Email: abduallah.adel.omar@gmail.com" className="flex items-center gap-3 text-sm group">
+                    <a href="mailto:abduallahaom@gmail.com" aria-label="Email: abduallahaom@gmail.com" className="flex items-center gap-3 text-sm group">
                       <div className="p-2 rounded bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
                         <Mail size={14} aria-hidden="true" className="text-primary" />
                       </div>
-                      <span className="text-muted-foreground group-hover:text-foreground transition-colors">abduallah.adel.omar@gmail.com</span>
+                      <span className="text-muted-foreground group-hover:text-foreground transition-colors">abduallahaom@gmail.com</span>
                     </a>
                     <a href="tel:5129241587" aria-label="Phone: 512-924-1587" className="flex items-center gap-3 text-sm group">
                       <div className="p-2 rounded bg-primary/10 border border-primary/20 group-hover:bg-primary/20 transition-colors">
@@ -845,7 +845,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   {[
                     { icon: Github, label: "GitHub", href: "https://github.com/abduallahmohamed", sub: "github.com/abduallahmohamed" },
-                    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/abduallah-mohamed/", sub: "linkedin.com/in/abduallah-mohamed" },
+                    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/abduallah/", sub: "linkedin.com/in/abduallah" },
                     { icon: BookOpen, label: "Google Scholar", href: "https://scholar.google.com/citations?hl=en&user=FAOtbV4AAAAJ", sub: `${totalCitations.toLocaleString()}+ citations` },
                   ].map((link) => (
                     <a

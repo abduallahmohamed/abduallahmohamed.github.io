@@ -78,7 +78,7 @@ describe("Accessibility: Home.tsx", () => {
   });
 
   it("contact links have aria-labels", () => {
-    expect(homeSource).toContain('aria-label="Email: abduallah.adel.omar@gmail.com"');
+    expect(homeSource).toContain('aria-label="Email: abduallahaom@gmail.com"');
     expect(homeSource).toContain('aria-label="Phone: 512-924-1587"');
   });
 
