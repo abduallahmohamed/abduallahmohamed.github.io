@@ -19,7 +19,7 @@ export const staticTotalCitations = 1921;
 export const staticPublications: Publication[] = [
   { year: "2026", title: "EgoInertia-MI: A Multimodal Egocentric Vision and IMU Benchmark for Motor Impairment Assessment", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2607.03934", demo: false, github: null },
   { year: "2026", title: "PAVE: A Cognitive Architecture for Legitimate Violation in Generative Agent Societies", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2605.19351", demo: false, github: null },
-  { year: "2026", title: "EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2605.19004", demo: false, github: null },
+  { year: "2026", title: "EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction", venue: "ECCV", citations: null, link: "https://arxiv.org/abs/2605.19004", demo: false, github: null },
   { year: "2026", title: "iMotion-LLM: Instruction-Conditioned Trajectory Generation", venue: "WACV", citations: 6, link: "https://arxiv.org/abs/2403.04928", demo: false, github: null },
   { year: "2024", title: "A Review of Deep Learning for Video Captioning", venue: "IEEE TPAMI", citations: 81, link: "https://scholar.google.com/citations?user=FAOtbV4AAAAJ", demo: false, github: null },
   { year: "2023", title: "FollowMe: Vehicle Behaviour Prediction in Autonomous Vehicle Settings", venue: "arXiv", citations: null, link: "https://arxiv.org/abs/2304.06121", demo: false, github: null },

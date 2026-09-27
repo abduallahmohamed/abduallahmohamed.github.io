@@ -27,7 +27,7 @@ const OUT = path.resolve(
 const CURATED = [
   { match: "egoinertia", title: "EgoInertia-MI: A Multimodal Egocentric Vision and IMU Benchmark for Motor Impairment Assessment", venue: "arXiv", link: "https://arxiv.org/abs/2607.03934", github: null, demo: false },
   { match: "pave: a cognitive", title: "PAVE: A Cognitive Architecture for Legitimate Violation in Generative Agent Societies", venue: "arXiv", link: "https://arxiv.org/abs/2605.19351", github: null, demo: false },
-  { match: "egotraj", title: "EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction", venue: "arXiv", link: "https://arxiv.org/abs/2605.19004", github: null, demo: false },
+  { match: "egotraj", title: "EgoTraj: Real-World Egocentric Human Trajectory Dataset for Multimodal Prediction", venue: "ECCV", link: "https://arxiv.org/abs/2605.19004", github: null, demo: false },
   { match: "imotion-llm", title: "iMotion-LLM: Instruction-Conditioned Trajectory Generation", venue: "WACV", link: "https://arxiv.org/abs/2403.04928", github: null, demo: false },
   { match: "video captioning", title: "A Review of Deep Learning for Video Captioning", venue: "IEEE TPAMI", link: "https://scholar.google.com/citations?user=FAOtbV4AAAAJ", github: null, demo: false },
   { match: "followme", title: "FollowMe: Vehicle Behaviour Prediction in Autonomous Vehicle Settings", venue: "arXiv", link: "https://arxiv.org/abs/2304.06121", github: null, demo: false },
