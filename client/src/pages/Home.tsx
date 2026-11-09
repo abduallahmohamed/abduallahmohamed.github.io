@@ -227,7 +227,7 @@ function Nav() {
 const experience = [
   {
     title: "VP of AI/ML",
-    company: "AIDAChip Inc",
+    company: "AIDAChip",
     period: "Jun 2026 – Present",
     startYear: "2026",
     location: "Redmond, WA",
@@ -340,7 +340,7 @@ const expertise = [
   {
     icon: Users,
     label: "Technical Leadership",
-    desc: "VP of AI/ML at AIDAChip Inc. Former tech lead across 4+ orgs and 6+ teams at Meta Reality Labs. Defining multi-year R&D roadmaps, AI/ML hiring, and cross-functional HW/SW/ML execution from research to product.",
+    desc: "VP of AI/ML at AIDAChip. Former tech lead across 4+ orgs and 6+ teams at Meta Reality Labs. Defining multi-year R&D roadmaps, AI/ML hiring, and cross-functional HW/SW/ML execution from research to product.",
     tags: ["VP AI/ML", "R&D Roadmaps", "Team Building", "Cross-Functional"],
   },
 ];
@@ -552,13 +552,13 @@ export default function Home() {
               <div className="flex items-center gap-5 mb-6">
                 <img
                   src="/profile.webp"
-                  alt="Abduallah Mohamed, PhD — VP of AI/ML at AIDAChip Inc"
+                  alt="Abduallah Mohamed, PhD — VP of AI/ML at AIDAChip"
                   width={300}
                   height={300}
                   className="w-24 h-24 lg:w-32 lg:h-32 rounded-full object-cover border-2 border-primary/40 shadow-lg shrink-0" style={{ objectPosition: '50% 15%' }}
                 />
                 <div>
-                  <div className="mono-label mb-1">VP of AI/ML · AIDAChip Inc</div>
+                  <div className="mono-label mb-1">VP of AI/ML · AIDAChip</div>
                   <div className="text-xs text-muted-foreground mono-label">Previously: Principal Applied Research Scientist · Meta Reality Labs</div>
                 </div>
               </div>
@@ -568,7 +568,7 @@ export default function Home() {
                 <span className="text-muted-foreground">, PhD</span>
               </h1>
               <p className="text-base lg:text-lg text-muted-foreground leading-relaxed max-w-xl mb-8">
-                VP of AI/ML at <span className="text-foreground font-medium">AIDAChip Inc</span>, building the AI platform for semiconductor IP development. Former Principal Research Scientist at <span className="text-foreground font-medium">Meta Reality Labs</span>.
+                VP of AI/ML at <span className="text-foreground font-medium">AIDAChip </span>, building the AI platform for semiconductor IP development. Former Principal Research Scientist at <span className="text-foreground font-medium">Meta Reality Labs</span>.
                 Core expertise spans <span className="text-foreground/80">agentic AI &amp; LLM frameworks</span>, <span className="text-foreground/80">AI memory &amp; knowledge systems</span>,<span className="text-foreground/80">IMU &amp; multi-modal sensor fusion</span>, <span className="text-foreground/80">indoor/outdoor motion tracking</span>, <span className="text-foreground/80">SLAM &amp; non-visual localization</span>, and <span className="text-foreground/80">multi-agent trajectory prediction</span>.
                 PhD, Electrical &amp; Computer Engineering — UT Austin.
               </p>
@@ -877,7 +877,7 @@ export default function Home() {
               © 2026 Abduallah Mohamed, PhD · Redmond, WA
             </div>
             <div className="mono-label text-[0.6rem] text-muted-foreground/40">
-              VP of AI/ML · AIDAChip Inc
+              VP of AI/ML · AIDAChip
             </div>
           </div>
         </footer>
